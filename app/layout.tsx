@@ -6,11 +6,13 @@ export const metadata: Metadata = {
   description: "Discover and customize premium furniture for your home.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout(
+  {
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>
+) {
   return (
     <html lang="en">
       <body>{children}</body>
