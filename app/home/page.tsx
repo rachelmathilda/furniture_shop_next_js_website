@@ -45,12 +45,10 @@ export default function HomePage() {
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-xl font-bold">Hot Items!!</h2>
           <div className="flex items-center gap-1">
-            {["00", "00", "00"].map((t, i) => (
-              <span key={`timer-${i}`} className="flex items-center gap-1">
-                <span className="bg-black text-white text-sm font-bold px-2 py-1 rounded">
-                  {t}
-                </span>
-                {i < 2 && <span className="text-black font-bold">:</span>}
+            {["hours", "minutes", "seconds"].map((unit) => (
+              <span key={unit} className="flex items-center gap-1">
+                <span className="bg-black text-white text-sm font-bold px-2 py-1 rounded">00</span>
+                {unit !== "seconds" && <span className="text-black font-bold">:</span>}
               </span>
             ))}
           </div>
